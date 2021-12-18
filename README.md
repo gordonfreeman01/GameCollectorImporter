@@ -1,5 +1,5 @@
 # GameCollectorImporter
-A tool to batch import entries into CLZ Game Collector
+A tool to batch import entries into CLZ Game Collector. This repo is still heavily WIP and the core features are still being built.
 
 ## Usage
 
