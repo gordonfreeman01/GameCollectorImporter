@@ -4,8 +4,8 @@ import logging
 
 #Declare argument parser
 parser = argparse.ArgumentParser(description="A utility to convert a JSON to Game Collector XML format")
-parser.add_argument("-i","--input", help="Input JSON file")
-parser.add_argument("-o","--output", help="Output JSON file")
+parser.add_argument("-i","--input", help="Input JSON file", required=True)
+parser.add_argument("-o","--output", help="Output XML file", required=True)
 parser.add_argument("-lf", "--logfile", help="Log file path", default="./log.txt")
 parser.add_argument("-ll", "--loglevel", help="Set logging level. Example --loglevel debug, default=INFO'", default="info")
 
