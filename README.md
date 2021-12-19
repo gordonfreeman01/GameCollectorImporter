@@ -1,6 +1,6 @@
 # GameCollectorImporter
 
->**This repo is still heavily WIP and the core features are being built.**
+>**This repo is still heavily WIP and the core features are still being built.**
 
 A tool to batch import entries into CLZ Game Collector.
 
