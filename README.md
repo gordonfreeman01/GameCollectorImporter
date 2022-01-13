@@ -32,7 +32,7 @@ optional arguments:
 
 ### Convert JSON File to XML
 
-The json2xml utility converts any JSON to a corresponding XML file without any schema transformations applied.
+The utility currently converts any valid JSON to a corresponding XML file without any XSLT transformation applied.
 
 ```bash
 python .\gcimporter.py --file <input JSON file path> --output <output XML file path> --logfile <optional log file custom path>

@@ -38,22 +38,12 @@ logger.debug("args: {0}".format(args))
 from json2xml import json2xml
 from json2xml.utils import readfromjson
 
-jsonData = readfromjson(inputFile)
+with open(outputFile, 'w') as outputDataFile:
+    jsonDataFile = readfromjson(inputFile)
+    outputDataFile.writelines(json2xml.Json2xml(jsonDataFile).to_xml())
 
-#Redirect stdout to file from https://stackabuse.com/writing-to-a-file-with-pythons-print-function/
-import sys
-# Save a reference to the original standard output
-original_stdout = sys.stdout
+logger.info("XML output to file: {0}".format(outputFile))
 
-with open(outputFile, 'w') as f:
-    # Change the standard output to the file we created.
-    sys.stdout = f
-    print(json2xml.Json2xml(jsonData).to_xml())
-    logger.info("XML output to file: {0}".format(outputFile))
-     # Reset the standard output to its original value
-    sys.stdout = original_stdout
-
-#TODO read line by line and append to file (library only converts a single json at a time)
 #TODO XSLT to GC XML format
 
 logger.info("XML export completed.")
